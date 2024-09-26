@@ -4,7 +4,6 @@ body{
     background-color: #000;
     margin: 0;
     font-size: 16px;
-
 }
 a{
     text-decoration:none;
@@ -281,81 +280,204 @@ header a{
     } 
 }
 
-@media screen and (max-width:678px){
-    .carousel .list .item .content{
-        padding-right: 0;
-    }
-    .carousel .list .item .content .title{
-        font-size: 30px;
-    }
-}
+.ingreso-datos{
+    background-color: #060606;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em;
 
+}
+.ingreso-datos h1{
+    font-weight: bold;
+    color: rgba(138, 124, 76, 0.512);
+
+}
 .formulario{
-    height: 80px;
+    box-shadow: 0 0 20px 0 #ffa908bb;
     display: grid;
     grid-template-columns: 1fr 1fr ;
-    text-align: center;
-    margin-bottom: 10px;
-
-
+    padding: 1.5em;
+    
+}
+.formulario > * {
+    padding: 0.4em;
 }
 
 .formulario input{
-    width: 200px;
+    width: 100%;
+    padding: 0.2em;
+    border: none;
+    outline: 0;
+    background: none;
+    border-bottom: 1px solid red;
+    font-weight: 600;
+    color: #555;
+}
+.formulario label{
+    width: 100%;
+    color: beige;
+    font-weight: bold;
 }
 
-.ingreso-datos {
-    text-align: center;
+
+.formulario button{
+    background-color: red;
+    color: black;
+    border: 0;
+    text-transform: uppercase;
+    padding: 1em;
+    font-weight: bold;
+}
+.formulario button:hover, 
+.formulario button:focus{
+    background-color: rgba(255, 0, 0, 0.437);
+    color: red;
+    transition:  background-color 1s ease-out;
+    font-weight: bold;
 }
 
-.ingreso-datos h1{
-    margin: 20px;
-    border: red 5px solid;
-    border-top-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
 
-.boton{
-    margin: 50px;
-    text-align: center;
-    height: 50px;
 
-}
 .productos-scroll {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; 
     gap: 20px;
+    background: black;
+    min-height: 100vh;
+    
 }
 
 
-
-
-.card{
-    display: block;
-    padding: 10px;
-    border-radius: 5px;
-    width: 90%; 
-    margin: 0 auto; 
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 60px;
 }
 
-.card-img-top{
-    max-width: 350px;
-    max-height: 200px;
-}
-
-.lista-productos{
-    text-align: center;
-}
-
-
-.lista-productos h2{
-    margin: 20px;
-    border: red 5px solid;
-    border-top-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
-
-.info{
+.container .card{
+    position: relative;
     width: 350px;
-    height: 200px;
+    height: 250px;
+    background: rgba(255, 0, 0, 0.812);
+    border-radius: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items:center ;
+    flex-direction: column;
+    cursor: pointer;
+    transition: 0.5s;
+    overflow: hidden;
 }
+
+.container .card:hover{
+    height: 500px;
+}
+
+.container .card .imgBx{
+    position: absolute;
+    inset: 20px 20px 50px 20px;
+    background: rgb(52, 47, 43);
+    border-radius: 15px;
+    transition: 0.5s;
+}
+
+.container .card:hover .imgBx{
+    inset: -50px 60px 250px 60px;
+    box-shadow: 0 0 0 10px var(black);
+}
+ 
+
+.container .card .imgBx::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    left: -30px;
+    border-top-right-radius: 20px;
+    transform: translateY(-100px);
+    opacity: 0;
+    box-shadow: 5px -5px 0 4px var(black);
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.container .card:hover .imgBx::before{
+    opacity: 1;
+    transform: translateY(50px);
+}
+
+.container .card .imgBx::after{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    right: -30px;
+    border-top-left-radius: 20px;
+    transform: translateY(-100px);
+    opacity: 1;
+    box-shadow: -5px -5px 0 4px var(black);
+    pointer-events: none;
+    transition: 0.5s;
+}
+.container .card:hover .imgBx::after{
+    opacity: 1;
+    transform: translateY(50px);
+}
+
+.container .card .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius:15px;
+}
+
+.container .card .card-text,
+.container .card .btn-warning,
+.container .card .btn-danger{
+    position: relative;
+    padding: 10px; 
+    text-align: justify;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-50px);
+    transition: 0.5s;
+    
+
+}
+
+.container .card:hover .card-text,
+.container .card:hover .btn-warning,
+.container .card:hover .btn-danger{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(40px);
+    margin-top: 20px;
+}
+
+.container .card .card-body .card-title{
+    position: absolute;
+    bottom: 8px;
+    color: rgb(21, 21, 21);
+    transition: 0.5s;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.container .card:hover .card-title{
+    padding: 5px 25px;
+    background: rgba(15, 15, 15, 0.849);
+    border-radius: 15px;
+    box-shadow: 0 0 0 10px var(black);
+    color: red
+};
+
+
