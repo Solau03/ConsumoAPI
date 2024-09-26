@@ -17,20 +17,22 @@ fetch("https://fake-api-vq1l.onrender.com/posts", {
     // const img = document.createElement("img");
     // img.src = images[0];
     const myhtml = document.createRange().createContextualFragment(` 
-
-      <div class="card">
-        <img src="${images[0]}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">${product.title}</h5>
-          <div class="info">
-          <p class="card-text">${product.description}</p>
+      <div class="container">
+        <div class="card">
+          <div class="imgBx">
+            <img src="${images[0]}" class="card-img-top" alt="...">
           </div>
-          <a class="btn btn-warning">Edit</a>
-          <a onclick="deletePost(${product.id})" class="btn btn-danger">Delete</a>
+          <div class="card-body">
+            <h3 class="card-title">${product.title}</h3>
+            <p class="card-text">${product.description}</p>
+            <h6 class="card-text">${product.value}</h6>
+            <a class="btn btn-warning">Edit</a>
+            <a onclick="deletePost(${product.id})" class="btn btn-danger">Delete</a>
+          </div>
         </div>
       </div>
-
-    `); 
+    `);
+    
     
     list.append(myhtml); 
   })
@@ -87,3 +89,4 @@ fetch(`https://fake-api-vq1l.onrender.com/posts/${id}`, {
   location.reload();
 })
 }
+
