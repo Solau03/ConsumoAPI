@@ -4,6 +4,7 @@ body{
     background-color: #000;
     margin: 0;
     font-size: 16px;
+
 }
 a{
     text-decoration:none;
@@ -307,6 +308,13 @@ header a{
     text-align: center;
 }
 
+.ingreso-datos h1{
+    margin: 20px;
+    border: red 5px solid;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
 .boton{
     margin: 50px;
     text-align: center;
@@ -328,4 +336,26 @@ header a{
     border-radius: 5px;
     width: 90%; 
     margin: 0 auto; 
+}
+
+.card-img-top{
+    max-width: 350px;
+    max-height: 200px;
+}
+
+.lista-productos{
+    text-align: center;
+}
+
+
+.lista-productos h2{
+    margin: 20px;
+    border: red 5px solid;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.info{
+    width: 350px;
+    height: 200px;
 }

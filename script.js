@@ -22,7 +22,9 @@ fetch("https://fake-api-vq1l.onrender.com/posts", {
         <img src="${images[0]}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">${product.title}</h5>
+          <div class="info">
           <p class="card-text">${product.description}</p>
+          </div>
           <a class="btn btn-warning">Edit</a>
           <a onclick="deletePost(${product.id})" class="btn btn-danger">Delete</a>
         </div>
