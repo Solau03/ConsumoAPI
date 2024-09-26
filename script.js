@@ -13,16 +13,12 @@ fetch("https://fake-api-vq1l.onrender.com/posts", {
 
 
   data.forEach( product => {
-    const il = document.createElement("li");
     const images = JSON.parse(product.images)
     // const img = document.createElement("img");
     // img.src = images[0];
-    const myhtml = ` 
+    const myhtml = document.createRange().createContextualFragment(` 
+
       <div class="card">
-        <div class="card_landing" style"--i:${images[0]}>
-          <h5>${product.title} </h5>
-        </div>
-        <div class="card_info" > </div>
         <img src="${images[0]}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">${product.title}</h5>
@@ -31,9 +27,10 @@ fetch("https://fake-api-vq1l.onrender.com/posts", {
           <a onclick="deletePost(${product.id})" class="btn btn-danger">Delete</a>
         </div>
       </div>
-    `; 
-    il.innerHTML =  myhtml;
-    list.appendChild(il); 
+
+    `); 
+    
+    list.append(myhtml); 
   })
 });
 

@@ -14,18 +14,20 @@
 </head>
 <body>
 
-    <!--Encabezado-->
-    <header>
-        <nav>
-            <a href="#INICIO"> INICIO </a>
-            <a href="#productos"> PRODUCTOS </a>
+    <!-- inicio Encabezado-->
+        <header>
+            <nav>
+                <a href="#INICIO"> INICIO </a>
+                <a href="#productos"> PRODUCTOS </a>
 
-        </nav>
-    </header>
+            </nav>
+        </header>
+    <!-- fin Encabezado-->
 
-    <!--Creamos el carrusel-->
+    <!-- inicio Creamos el carrusel-->
     <div id="INICIO" class="carousel prev">
-        <!--Lista item de noticias-->
+
+        <!-- inicio Lista item de noticias-->
         <div class="list">
             <div class="item">
                 <img src="https://wallpapersmug.com/download/3840x2160/0b8983/dark-souls-3.jpg" alt="Holi">
@@ -64,8 +66,9 @@
                 </div>
             </div>
         </div>
+        <!-- fin Lista item de noticias-->
 
-        <!--Thumbnail-->
+        <!-- inicio Thumbnail-->
         <div class="thumbnail">
             <div class="item">
                 <img src="https://wallpapersmug.com/download/3840x2160/0b8983/dark-souls-3.jpg" alt="">
@@ -92,47 +95,62 @@
                 </div>
             </div>
         </div>
+        <!-- fin Thumbnail-->
 
-        <!--Arrows-->
+        <!-- inicio Arrows-->
         <div class="arrows">
             <button id="prev"><</button>
             <button id="next">></button>
         </div>
+        <!-- fin Arrows-->
+
         <div class="time"></div>
     </div>
+    <!-- fin Creamos el carrusel-->
+
     <script src="app.js"></script>
 
     
-
+    <!-- inicio formulariio-->
     <div class="ingreso-datos">
-        <h1> Ingresar nuevo articulo </h1>
-    </div>
-
-    <div class="formulario">
-    <label class="label"  for="title"> Title</label>
-    <input id="title" type="text">
-
-    <label class="label"  for="description">Description</label>
-    <input id="description" type="text">
-
-    <label class="label"  for="value">Value</label>
-    <input id="value" type="number">
-
-    <label class="label" for="imanumberge">Image</label>
-    <input id="image" type="text">
-
-    </div>
-    <button onclick="sendForm()" style="width: 100%;"> Guardar</button>
-
-
-    <h1>ul1</h1>
-    <div id="productos" class="productos-scroll">
-        <h2>Lista de productos</h2>
         
+        <h1> Ingresar nuevo articulo </h1>
+    
+
+            <div class="formulario">
+                <label   for="title"> TITULO</label>
+                 <input id="title" type="text">
+
+                <label   for="description">Descripcion</label>
+                    <input id="description" type="text">
+
+                <label   for="value">Value</label>
+                    <input id="value" type="number">
+
+                <label for="imanumberge">Image</label>
+                    <input id="image" type="text">
+
+            </div>
+
+            <div class="boton">
+                <button onclick="sendForm()" > Guardar </button>
+            </div>
     </div>
+    <!-- fin formulariio-->
+
+    <!-- inicio lista de los productos-->
+        <div class="lista-productos">
+            <h2>Lista de productos</h2>
+                <div id="productos" class="productos-scroll">
+        
+        
+                </div>
+        </div>
+    <!-- fin lista de los productos -->
 </body>
 <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous">
+</script>
 </html>
