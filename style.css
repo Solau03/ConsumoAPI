@@ -315,7 +315,7 @@ header a{
 }
 .productos-scroll {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* Dos columnas de 300px cada una */
+    grid-template-columns: 1fr 1fr 1fr; 
     gap: 20px;
 }
 
@@ -326,6 +326,6 @@ header a{
     display: block;
     padding: 10px;
     border-radius: 5px;
-    width: 90%; /* Ocupa el 90% de la columna */
-    margin: 0 auto; /* Centra las tarjetas en sus columnas */
+    width: 90%; 
+    margin: 0 auto; 
 }
