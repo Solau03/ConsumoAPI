@@ -18,6 +18,7 @@
         <header>
             <nav>
                 <a href="#INICIO"> INICIO </a>
+                <a href="#formulario"> CREAR PRODUCTO </a>
                 <a href="#productos"> PRODUCTOS </a>
 
             </nav>
@@ -112,29 +113,32 @@
 
     
     <!-- inicio formulariio-->
-    <div class="ingreso-datos">
-        
-        <h1> Ingresar nuevo articulo </h1>
-    
-
+    <div class="ingreso-datos" id="formulario">
+        <h1> Nuevo Producto</h1>
             <div class="formulario">
-                <label   for="title"> TITULO</label>
-                 <input id="title" type="text">
-
-                <label   for="description">Descripcion</label>
+                
+                <p>
+                    <label   for="title"> Nombre del producto</label>
+                    <input id="title" type="text">
+                </p>
+                
+                <p>
+                    <label   for="description">Descripción</label>
                     <input id="description" type="text">
+                </p>
 
-                <label   for="value">Value</label>
+                <p>
+                    <label   for="value">Precio</label>
                     <input id="value" type="number">
-
-                <label for="imanumberge">Image</label>
+                </p>
+                
+                <p>
+                    <label for="imanumberge">Image</label>
                     <input id="image" type="text">
-
-            </div>
-
-            <div class="boton">
-                <button onclick="sendForm()" > Guardar </button>
-            </div>
+                </p>
+                
+                    <button onclick="sendForm()" > Guardar </button>
+            </div> 
     </div>
     <!-- fin formulariio-->
 
@@ -142,7 +146,6 @@
         <div class="lista-productos">
             <h2>Lista de productos</h2>
                 <div id="productos" class="productos-scroll">
-        
         
                 </div>
         </div>
