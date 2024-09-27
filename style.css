@@ -286,6 +286,8 @@ header a{
     margin-left: auto;
     margin-right: auto;
     padding: 1.5em;
+    text-align: center;
+
 
 }
 .ingreso-datos h1{
@@ -294,10 +296,11 @@ header a{
 
 }
 .formulario{
-    box-shadow: 0 0 20px 0 #ffa908bb;
+    
     display: grid;
     grid-template-columns: 1fr 1fr ;
     padding: 1.5em;
+    border-radius: 10px;
     
 }
 .formulario > * {
@@ -313,6 +316,7 @@ header a{
     border-bottom: 1px solid red;
     font-weight: 600;
     color: #555;
+    text-align: center;
 }
 .formulario label{
     width: 100%;
@@ -321,20 +325,31 @@ header a{
 }
 
 
-.formulario button{
+.boton button{
     background-color: red;
     color: black;
     border: 0;
     text-transform: uppercase;
     padding: 1em;
     font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 400px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px red;
 }
-.formulario button:hover, 
-.formulario button:focus{
+.boton button:hover, 
+.boton button:focus{
     background-color: rgba(255, 0, 0, 0.437);
     color: red;
     transition:  background-color 1s ease-out;
     font-weight: bold;
+}
+
+.container-formulario{
+    box-shadow: 0 0 20px 0 #ffa908bb;
+    border-radius: 10px;
 }
 
 .lista-productos{
@@ -382,6 +397,7 @@ header a{
     cursor: pointer;
     transition: 0.5s;
     overflow: hidden;
+    box-shadow: 0 0 20px 0 #ffa908bb;
 }
 
 .container .card:hover{
@@ -535,6 +551,8 @@ header a{
     color: red
     
 };
+
+
 
 
 

@@ -111,6 +111,8 @@
     <!-- inicio formulariio-->
     <div class="ingreso-datos" id="formulario">
         <h1> Nuevo Producto</h1>
+
+        <div class="container-formulario">
             <div class="formulario">
                 
                 <p>
@@ -133,9 +135,14 @@
                     <input id="image" type="text">
                 </p>
                 <input type="hidden" id="editId"> <!-- Entrada oculta para almacenar el ID del producto que se está editando -->
-                <button onclick="sendForm()" > Guardar </button>
+                
                     
             </div> 
+
+            <div class="boton">
+            <button onclick="sendForm()" > Guardar </button>
+            </div>
+        </div>
     </div>
     <!-- fin formulariio-->
 
@@ -143,6 +150,7 @@
         <div class="lista-productos">
             <h2 class="textito">Lista de productos</h2>
                 <div id="productos" class="productos-scroll">
+                    
         
                 </div>
         </div>
