@@ -10,20 +10,20 @@ fetch("https://fake-api-vq1l.onrender.com/posts", {
   data.forEach(product => {
     const images = JSON.parse(product.images);
     const myhtml = document.createRange().createContextualFragment(` 
-      <div class="container">
-        <div class="card">
-          <div class="imgBx">
-            <img src="${images[0]}" class="card-img-top" alt="...">
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">${product.title}</h3>
-            <p class="card-text">${product.description}</p>
-            <p class="card-text">$ ${product.value}</p>
-            <button onclick="editar(${product.id})" class="btn-warning">Edit</button>
-            <button onclick="deletePost(${product.id})" class="btn-danger">Delete</button>
-          </div>
-        </div>
-      </div>
+                    <div class="container">
+                        <div class="card">
+                          <div class="imgBx">
+                            <img src="${images[0]}" class="card-img-top" alt="...">
+                          </div>
+                          <div class="card-body">
+                            <h3 class="card-title">${product.title}</h3>
+                            <p class="card-text">${product.description}</p>
+                            <p class="card-text">$ ${product.value}</p>
+                            <button onclick="editar(${product.id})" class="btn-warning"> <img src="imagenes/pencil-square.svg" alt="editar"> Edit</button>
+                            <button onclick="deletePost(${product.id})" class="btn-danger"> <img src="imagenes/trash3-fill.svg" alt="eliminar"> Delete</button>
+                          </div>
+                        </div>
+                      </div>
     `);
     list.append(myhtml); 
   })
