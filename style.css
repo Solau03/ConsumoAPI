@@ -7,7 +7,7 @@ body{
 }
 a{
     text-decoration:none;
-    color: rgb(255, 255, 255);
+    color: rgb(97, 220, 48);
 
     
 }
@@ -337,7 +337,18 @@ header a{
     font-weight: bold;
 }
 
-
+.lista-productos{
+    background: #060606;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em;
+}
+.lista-productos h2{
+    color: wheat;
+    font-weight: bold;
+    
+}
 
 .productos-scroll {
     display: grid;
@@ -440,18 +451,60 @@ header a{
     border-radius:15px;
 }
 
+.container .card .card-text{ 
+    color: #f4d1d1;
+}
+
+.container .card .btn-danger{
+    background-color: transparent;
+    padding: 2px;
+    font-weight: bold;
+    color: black;
+    border: 0;
+    text-transform: uppercase;
+    padding: 1em;
+}
+
+.container .card .btn-danger:hover,
+.container .card .btn-danger:focus{
+    background-color: rgba(255, 88, 88, 0.437);
+    color: red;
+    transition:  background-color 1s ease-out;
+    font-weight: bold;
+}
+
+.container .card .btn-warning{
+    background-color: transparent;
+    padding: 2px;
+    color: rgba(255, 238, 7, 0.462);
+    border: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 1em;
+}
+
+.container .card .btn-warning:hover,
+.container .card .btn-warning:focus{
+    background-color: rgba(255, 237, 43, 0.566);
+    color: rgb(255, 191, 0);
+    transition:  background-color 1s ease-out;
+    font-weight: bold;
+
+}
+
+
 .container .card .card-text,
 .container .card .btn-warning,
 .container .card .btn-danger{
     position: relative;
-    padding: 10px; 
+    margin-bottom: 0.02px;
+    padding: 15px; 
     text-align: justify;
+    font-weight: 500;
     opacity: 0;
     visibility: hidden;
     transform: translateY(-50px);
     transition: 0.5s;
-    
-
 }
 
 .container .card:hover .card-text,
@@ -459,8 +512,9 @@ header a{
 .container .card:hover .btn-danger{
     opacity: 1;
     visibility: visible;
-    transform: translateY(40px);
-    margin-top: 20px;
+    transform: translateY(120px);
+    margin-top: 10px;
+    margin-bottom: 0.02px;
 }
 
 .container .card .card-body .card-title{
@@ -469,8 +523,9 @@ header a{
     color: rgb(21, 21, 21);
     transition: 0.5s;
     font-weight: 600;
-    margin: 10px 0;
+    margin: 10px 8px;
 }
+
 
 .container .card:hover .card-title{
     padding: 5px 25px;
@@ -478,6 +533,9 @@ header a{
     border-radius: 15px;
     box-shadow: 0 0 0 10px var(black);
     color: red
+    
 };
+
+
 
 
